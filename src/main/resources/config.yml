@@ -1,0 +1,26 @@
+# Base URL for your 2FA web backend
+# Example: https://auth.example.com
+api:
+  base-url: "http://127.0.0.1:8080"
+  verify-endpoint: "/api/v1/2fa/verify"
+  timeout-ms: 5000
+
+security:
+  # Regex the plugin enforces for 2FA code input (15-20 random digits)
+  twofa-code-regex: "^[0-9]{15,20}$"
+
+messages:
+  prefix: "&8[&bValrio2FA&8] &r"
+  register-success: "&aRegistered successfully."
+  already-registered: "&cYou are already registered."
+  not-registered: "&cYou are not registered."
+  login-success: "&aLogin successful."
+  bad-password: "&cInvalid password."
+  twofa-required: "&e2FA is enabled. Use: /login <password> <2fa_code>"
+  twofa-invalid-format: "&cInvalid 2FA code format. It must be 15-20 digits."
+  twofa-invalid: "&c2FA code is invalid."
+  twofa-enable-success: "&a2FA enabled for your account."
+  twofa-disable-success: "&a2FA disabled for your account."
+  twofa-status-on: "&a2FA: ENABLED"
+  twofa-status-off: "&c2FA: DISABLED"
+  web-error: "&cCould not verify 2FA code (web system unreachable/error)."
