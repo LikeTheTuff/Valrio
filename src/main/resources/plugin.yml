@@ -1,0 +1,18 @@
+name: Valrio2FA
+version: 1.0.0
+main: com.valrio.twofa.ValrioTwoFAPlugin
+api-version: 1.17
+author: Valrio
+commands:
+  register:
+    description: Register an account password
+    usage: /register <password>
+  login:
+    description: Login with password and optional 2FA code
+    usage: /login <password> [2fa_code]
+  twofa:
+    description: Manage 2FA settings
+    usage: /twofa <enable|disable|status>
+permissions:
+  valrio2fa.admin:
+    default: op
